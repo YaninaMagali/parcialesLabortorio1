@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PARCIAL1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PARCIAL1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PARCIAL1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="MascotasRazasPaises.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MascotasRazasPaises.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mascotas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mascotas.h" />
+		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.h" />
+		<Unit filename="paises.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="paises.h" />
+		<Unit filename="pedirDatos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pedirDatos.h" />
+		<Unit filename="razas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="razas.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
