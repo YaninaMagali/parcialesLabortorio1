@@ -17,9 +17,9 @@ void inicializarArrayRazaComoVacio(eRaza listaRazas[], int T);
 int buscarPrimerEspacioVacioEnListadoRaza(eRaza listaRazas[], int T);
 int cambiarEstadoRazaEstaVacio(eRaza razaData);
 
-int buscarIdRazaPorIndice(eRaza listaRazas[],  int tamanioListaRaza, int indice);
+int buscarIndicePorIdRaza(eRaza listaRazas[],  int tamanioListaRaza, int idRaza);
 int buscarIdPaisOrigenPorIdRaza(eRaza listaRazas[],  int tamanioListaRaza, int idRaza);
-int buscarRazaPorId(eRaza listaRazas[],  int tamanioListaRaza, int idRaza);
+int chequearExistenciaRazaPorId(eRaza listaRazas[],  int tamanioListaRaza, int idRaza);
 int buscarRazaPorIdPais(eRaza listaRazas[],  int tamanioListaRaza, int idPais);
 
 void mostrarRazaPorIdRaza(eRaza listaRazas[],  int tamanioListaRaza, int idRaza);

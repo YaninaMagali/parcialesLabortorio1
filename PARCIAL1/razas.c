@@ -16,7 +16,7 @@ void hardcodearRazas(eRaza lista[], int tamanioListaRaza)
 {
     int idRaza[6] = {1,2,3,4, 5, 6};
     char descripcionRaza[6][15] = {"Siames", "Doberman", "Persa", "PastorBelga", "DogoArgentino", "PastorAleman"};
-    char tamanioRaza[6][8] = {"Chico", "Grande", "Mediano", "Grande", "Grande", "Grande"};
+    char tamanioRaza[6][9] = {"Chico", "Grande", "Mediano", "Grande", "Grande", "Grande"};
     int idPaisOrigen[6] = {1, 2, 3, 4, 5, 2};
     int estaVacio [6] = {0,0,0,0,0,0};
 
@@ -79,7 +79,7 @@ int cambiarEstadoRazaEstaVacio(eRaza razaData)
 }
 
 
-int buscarRazaPorId(eRaza listaRazas[],  int tamanioListaRaza, int idRaza)//cambiar nombre, ya que esto en realidad SOLO chequea si existe
+int chequearExistenciaRazaPorId(eRaza listaRazas[],  int tamanioListaRaza, int idRaza)//cambiar nombre, ya que esto en realidad SOLO chequea si existe
 {
     int i;
     int resultadoBusqueda;
@@ -130,7 +130,7 @@ int ElegirRazaAAsignar(eRaza listaRazas[], int tamanioListaRaza)
 
     id = pedirEntero(" ");
 
-    if(buscarRazaPorId(listaRazas,tamanioListaRaza, id) == -1)
+    if(chequearExistenciaRazaPorId(listaRazas,tamanioListaRaza, id) == -1)
     {
         printf("Raza inexistente.");
     }
@@ -168,6 +168,7 @@ int buscarIndicePorIdRaza(eRaza listaRazas[],  int tamanioListaRaza, int idRaza)
         if(listaRazas[i].idRaza == idRaza)
         {
             indice = i;
+            break;
         }
     }
     return indice;

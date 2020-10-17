@@ -5,32 +5,32 @@
 
 1602679789 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.h
 
-1602796885 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.c
+1602970772 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.c
 	<string.h>
 	<stdio.h>
 	"mascotas.h"
 	"pedirDatos.h"
 
-1602796644 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.h
+1602965999 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.h
 
 1602796107 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\pedirdatos.h
 
-1602807261 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.c
+1602970208 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.c
 	<string.h>
 	<stdio.h>
 	"MascotasRazasPaises.h"
 	"pedirDatos.h"
 
-1602807633 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.h
+1602970866 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.h
 	"mascotas.h"
 	"razas.h"
 	"paises.h"
 
-1602810212 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\razas.h
+1602969860 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\razas.h
 
 1602795028 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\paises.h
 
-1602809855 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.c
+1602966026 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -45,7 +45,7 @@
 	"paises.h"
 	"pedirDatos.h"
 
-1602809802 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\razas.c
+1602970290 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\razas.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

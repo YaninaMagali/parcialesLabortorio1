@@ -29,9 +29,11 @@ void menu(void)
     float promedioPesoPerros;
     float promedioPesoGatos;
     char tamanioRaza[TAMANIO_TAMANIO_RAZA];
+    float sumaPesosPorTamanio;
 
     ultimoIdMascota = 5;
     idRaza = 4;
+    sumaPesosPorTamanio=0;
 
     inicializarArrayComoVacio(listaMascota, TAM_LISTA_MASCOTA);
     inicializarArrayRazaComoVacio(listaRazas, TAM_LISTA_RAZA);
@@ -108,7 +110,7 @@ void menu(void)
             printf("\nEl pais con mayor cantidad de mascotas registradas es:");
             mostrarPaisConMayorCantidadMascotas(listaPaises, TAM_LISTA_PAISES);
             break;
-        case 12: // SUMA TOTAL DE PESOS POR TIPO
+        case 12: // SUMA TOTAL DE PESOS POR TIPO PASAR TODO ESTO A UNA FUNCION
             sumaPesosPerros = sumarPesoTotalPorTipo(listaMascota, TAM_LISTA_MASCOTA, "Perro");
             sumaPesosGatos = sumarPesoTotalPorTipo(listaMascota, TAM_LISTA_MASCOTA, "Gato");
             cantidadTotalPerros = contarCantidadMascotasPorTipo(listaMascota, TAM_LISTA_MASCOTA, "Perro");
@@ -119,11 +121,14 @@ void menu(void)
             printf("\n       |  PESO TOTAL POR TIPO  |  CANTIDAD POR TIPO  |  PROMEDIO POR TIPO");
             printf("\nPERROS %16.2f %21.2f %22.2f\n", sumaPesosPerros,cantidadTotalPerros, promedioPesoPerros);
             printf("GATOS  %16.2f %21.2f %22.2f\n", sumaPesosGatos,cantidadTotalGatos, promedioPesoGatos);
+            break;
         case 13:
-            if(pedirTamanioRaza(&tamanioRaza)== 0)
+            if(pedirTamanioRaza(tamanioRaza)== 0)
             {
                 printf("\nID|  NOMBRE   |   EDAD    |   SEXO   |   PESO    |   TIPO   |   RAZA   |   TAMANIO   |  ORIGEN    |     CONTINENTE    |   COD  AREA\n");
                 mostrarMascotaPorTamanio(tamanioRaza, listaMascota, TAM_LISTA_MASCOTA, listaRazas, TAM_LISTA_RAZA, listaPaises, TAM_LISTA_PAISES);
+                sumaPesosPorTamanio = sumarPesoTotalPorTamanio(tamanioRaza, listaMascota, TAM_LISTA_MASCOTA, listaRazas, TAM_LISTA_RAZA);
+                printf("sumaPesosPorTamanio es %.2f", sumaPesosPorTamanio);
             }
             break;
         }

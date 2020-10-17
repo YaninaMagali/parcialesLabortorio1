@@ -140,10 +140,13 @@ void mostrarMascotaPorTamanio(char tamanio[],eMascota listaMascota[], int tamani
 {
     int i;
     for(i = 0; i < tamanioListaRaza; i++)
-    if(strcmp(listaRazas[i].tamanioRaza, tamanio) == 0)
     {
-       mostrarUnaMascotaPorIdRaza(listaMascota, tamanioListaMascota, listaRazas[i].idRaza , listaRazas, tamanioListaRaza, listaPaises, tamanioListaPaises);
+        if(strcmp(listaRazas[i].tamanioRaza, tamanio) == 0)
+        {
+           mostrarUnaMascotaPorIdRaza(listaMascota, tamanioListaMascota, listaRazas[i].idRaza , listaRazas, tamanioListaRaza, listaPaises, tamanioListaPaises);
+        }
     }
+
 }
 /**
 void mostrarMascotaOrdenadaPorCodigoArea(eMascota listaMascota[], int tamanioListaMascota, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises)
@@ -412,4 +415,21 @@ int borrarRaza(eMascota listaMascota[], int tamanioListaMascota, int idRazaSolic
 }
 
 
+float sumarPesoTotalPorTamanio(char tamanioMascota[], eMascota listaMascota[], int tamanioListaMascota,  eRaza listaRazas[],  int tamanioListaRaza)
+{
+    float sumaPesos;
+    int i;
+    int indice;
 
+    sumaPesos = 0;
+
+    for(i = 0; i < tamanioListaMascota; i++)
+    {
+        indice = buscarIndicePorIdRaza(listaRazas, tamanioListaRaza, listaMascota[i].idRaza);
+        if(strcmp(listaRazas[indice].tamanioRaza, tamanioMascota) == 0)
+        {
+            sumaPesos = sumaPesos + listaMascota[i].pesoMascota;
+        }
+    }
+    return sumaPesos;
+}
