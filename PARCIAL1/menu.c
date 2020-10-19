@@ -22,12 +22,14 @@ void menu(void)
     int idRaza;
     int idRazaSolicitada;
     int idMascotaSolicitado;
+    /*
     float sumaPesosPerros;
     float sumaPesosGatos;
     float cantidadTotalPerros;
     float cantidadTotalGatos;
     float promedioPesoPerros;
     float promedioPesoGatos;
+    */
     char tamanioRaza[TAMANIO_TAMANIO_RAZA];
     float sumaPesosPorTamanio;
 
@@ -44,7 +46,7 @@ void menu(void)
 
     do
     {
-        opcion = pedirEntero("\nOPCIONES MENU.\n 1. CARGAR MASCOTAS\n 2. BORRAR MASCOTA\n 3. EDITAR MASCOTA\n 4. MOSTRAR MASCOTAS\n 5. MOSTRAR MASCOTAS POR RAZA\n 6. MOSTRAR MASCOTAS POR PESO\n 7. MOSTRAR MASCOTAS POR COD AREA\n 8. CARGAR RAZA\n 9. BORRAR RAZA\n 10. MOSTRAR RAZAS\n 11. MOSTRAR PAISES\n 12. MOSTRAR POR TIPO y PESO\n 13. MOSTRAR POR TAMANIO\n 0. SALIR\n");
+        opcion = pedirEntero("\nOPCIONES MENU.\n 1. CARGAR MASCOTAS\n 2. BORRAR MASCOTA\n 3. EDITAR MASCOTA\n 4. MOSTRAR MASCOTAS\n 5. MOSTRAR MASCOTAS POR RAZA\n 6. MOSTRAR MASCOTAS POR PESO\n 7. MOSTRAR MASCOTAS POR COD AREA\n 8. CARGAR RAZA\n 9. BORRAR RAZA\n 10. MOSTRAR RAZAS\n 11. MOSTRAR PAISES\n 12. MOSTRAR SUMA PESOS, CANTIDAD Y PROMEDIO POR TIPO\n 13. MOSTRAR POR TAMANIO\n 0. SALIR\n");
 
         switch(opcion)
         {
@@ -115,16 +117,7 @@ void menu(void)
             mostrarListaPaises(listaPaises, TAM_LISTA_PAISES);
             break;
         case 12: // SUMA TOTAL DE PESOS POR TIPO PASAR TODO ESTO A UNA FUNCION
-            sumaPesosPerros = sumarPesoTotalPorTipo(listaMascota, TAM_LISTA_MASCOTA, "Perro");
-            sumaPesosGatos = sumarPesoTotalPorTipo(listaMascota, TAM_LISTA_MASCOTA, "Gato");
-            cantidadTotalPerros = contarCantidadMascotasPorTipo(listaMascota, TAM_LISTA_MASCOTA, "Perro");
-            cantidadTotalGatos = contarCantidadMascotasPorTipo(listaMascota, TAM_LISTA_MASCOTA, "Gato");
-            promedioPesoPerros = calcularPromedio(sumaPesosPerros, cantidadTotalPerros);
-            promedioPesoGatos = calcularPromedio(sumaPesosGatos, cantidadTotalGatos);
-
-            printf("\n       |  PESO TOTAL POR TIPO  |  CANTIDAD POR TIPO  |  PROMEDIO POR TIPO");
-            printf("\nPERROS %16.2f %21.2f %22.2f\n", sumaPesosPerros,cantidadTotalPerros, promedioPesoPerros);
-            printf("GATOS  %16.2f %21.2f %22.2f\n", sumaPesosGatos,cantidadTotalGatos, promedioPesoGatos);
+            mostrarSumaPesosCantidadYPromedioPorTipo(listaMascota, TAM_LISTA_MASCOTA);
             break;
         case 13:
             if(pedirTamanioRaza(tamanioRaza)== 0)

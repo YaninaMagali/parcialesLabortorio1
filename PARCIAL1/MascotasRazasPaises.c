@@ -435,3 +435,4 @@ float sumarPesoTotalPorTamanio(char tamanioMascota[], eMascota listaMascota[], i
     }
     return sumaPesos;
 }
+

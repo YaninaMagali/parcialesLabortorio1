@@ -192,3 +192,23 @@ float calcularPesoPorIdRaza(int idRaza, eMascota listaMascotas[], int tamanioLis
     return sumaTotalPesosPorId;
 }
 
+void mostrarSumaPesosCantidadYPromedioPorTipo(eMascota listaMascota[], int tamanioListaMascota)
+{
+    float sumaPesosPerros;
+    float sumaPesosGatos;
+    float cantidadTotalPerros;
+    float cantidadTotalGatos;
+    float promedioPesoPerros;
+    float promedioPesoGatos;
+
+    sumaPesosPerros = sumarPesoTotalPorTipo(listaMascota, tamanioListaMascota, "Perro");
+    sumaPesosGatos = sumarPesoTotalPorTipo(listaMascota, tamanioListaMascota, "Gato");
+    cantidadTotalPerros = contarCantidadMascotasPorTipo(listaMascota, tamanioListaMascota, "Perro");
+    cantidadTotalGatos = contarCantidadMascotasPorTipo(listaMascota, tamanioListaMascota, "Gato");
+    promedioPesoPerros = calcularPromedio(sumaPesosPerros, cantidadTotalPerros);
+    promedioPesoGatos = calcularPromedio(sumaPesosGatos, cantidadTotalGatos);
+
+    printf("\n       |  PESO TOTAL POR TIPO  |  CANTIDAD POR TIPO  |  PROMEDIO POR TIPO");
+    printf("\nPERROS %16.2f %21.2f %22.2f\n", sumaPesosPerros,cantidadTotalPerros, promedioPesoPerros);
+    printf("GATOS  %16.2f %21.2f %22.2f\n", sumaPesosGatos,cantidadTotalGatos, promedioPesoGatos);
+}

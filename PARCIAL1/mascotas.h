@@ -22,4 +22,6 @@ float sumarPesoTotalPorTipo(eMascota listaMascota[], int tamanioListaMascota, ch
 float contarCantidadMascotasPorTipo(eMascota listaMascota[], int tamanioListaMascota, char tipo[]);
 
 int buscarIdMascotaPorIdRaza(eMascota listaMascota[], int tamanioListaMascota, int idRazaRecibido);
+
+void mostrarSumaPesosCantidadYPromedioPorTipo(eMascota listaMascota[], int tamanioListaMascota);
 #endif // MASCOTAS_H_INCLUDED
