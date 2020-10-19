@@ -5,7 +5,7 @@
 #include "paises.h"
 //RAZAS
 eRaza cargarRaza(eRaza razaData, int ultimoIdRaza, ePais listaPaises[], int tamanioListaPaises);
-int borrarRaza(eMascota listaMascota[], int tamanioListaMascota, int idRazaSolicitada, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais)
+int borrarRaza(eMascota listaMascota[], int tamanioListaMascota, int idRazaSolicitada, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais);
 int pedirRaza(eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 void mostrarRazas(eRaza razaData, ePais listaPaises[], int tamanioListaPaises);
 void mostrarListaRazas(eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
@@ -23,7 +23,7 @@ void mostrarListaMascotasPorRaza(eMascota listaMascota[], int tamanioListaMascot
 void mostrarMascota(eMascota mascotaData, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 void mostrarListaMascota(eMascota listaMascota[], int tamanioLista, eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 void mostrarMascotaOrdenadaPorPeso(eMascota listaMascota[], int tamanioLista, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
-void mostrarMascotaOrdenadaPorCodigoArea(ePais listaPaises[], int tamanioListaPaises, eRaza listaRazas[],  int tamanioListaRaza, eMascota listaMascota[], int tamanioListaMascota);
+void mostrarMascotaOrdenadaPorCodigoArea(eMascota listaMascota[], int tamanioListaMascota, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 void mostrarMascotaPorTamanio(char tamanio[],eMascota listaMascota[], int tamanioListaMascota, eRaza listaRazas[],int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 
 

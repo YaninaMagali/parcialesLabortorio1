@@ -81,7 +81,8 @@ void menu(void)
             mostrarMascotaOrdenadaPorPeso(listaMascota, TAM_LISTA_MASCOTA, listaRazas, TAM_LISTA_RAZA, listaPaises, TAM_LISTA_PAISES);
             break;
         case 7:
-            //mostrarMascotaOrdenadaPorCodigoArea(listaPaises, TAM_LISTA_PAISES, listaRazas, TAM_LISTA_RAZA, listaMascota, TAM_LISTA_MASCOTA);
+            mostrarMascotaOrdenadaPorCodigoArea(listaMascota, TAM_LISTA_MASCOTA, listaRazas, TAM_LISTA_RAZA, listaPaises, TAM_LISTA_PAISES);
+            //mostrarListaMascota(listaMascota, TAM_LISTA_MASCOTA, listaRazas, TAM_LISTA_RAZA, listaPaises, TAM_LISTA_PAISES);
             break;
         case 8: // CARGAR RAZAS
             filaRaza = buscarPrimerEspacioVacioEnListadoRaza(listaRazas, TAM_LISTA_RAZA);
@@ -109,6 +110,9 @@ void menu(void)
             mostrarListaPaises(listaPaises, TAM_LISTA_PAISES);
             printf("\nEl pais con mayor cantidad de mascotas registradas es:");
             mostrarPaisConMayorCantidadMascotas(listaPaises, TAM_LISTA_PAISES);
+            printf("\nordenarPaisPorCodigoArea\n");
+            ordenarPaisPorCodigoArea(listaPaises, TAM_LISTA_PAISES);
+            mostrarListaPaises(listaPaises, TAM_LISTA_PAISES);
             break;
         case 12: // SUMA TOTAL DE PESOS POR TIPO PASAR TODO ESTO A UNA FUNCION
             sumaPesosPerros = sumarPesoTotalPorTipo(listaMascota, TAM_LISTA_MASCOTA, "Perro");

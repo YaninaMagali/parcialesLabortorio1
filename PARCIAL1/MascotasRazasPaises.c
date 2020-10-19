@@ -148,36 +148,38 @@ void mostrarMascotaPorTamanio(char tamanio[],eMascota listaMascota[], int tamani
     }
 
 }
-/**
+
 void mostrarMascotaOrdenadaPorCodigoArea(eMascota listaMascota[], int tamanioListaMascota, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises)
 {
-    int max;
+    int i;
+    int j;
+    int idPaisI;
+    int indicePaisI;
+    int idPaisJ;
+    int indicePaisJ;
+    eMascota aux;
 
-    //mostrarListaPaises(listaPaises, tamanioListaPaises);
-    printf("\nID| NOMBRE |   EDAD   |       SEXO       |  PESO  | TIPO  |   PAIS ORIGEN   |      CONTINENTE      |    COD AREA");
-
-    //recorro lista mascotas
-    for(i = 0; i < tamanioListaPaises; i++)
+    for(i = 0; i < tamanioListaMascota; i++)
     {
-        if(i == 0 || listaPaises[i].codigoArea > max)
+
+        for(j = i+1; j < tamanioListaMascota; j++)
         {
-            max = listaPaises[i].codigoArea;
-            raza = buscarRazaPorIdPais(listaRazas, tamanioListaRazas, max);
-            mostrarMascotaPorIdRaza(listaRazas, tamanioListaRaza, listaMascota, tamanioListaMascota, raza, listaPaises, tamanioListaPaises);
+            idPaisI = buscarIdPaisOrigenPorIdRaza(listaRazas, tamanioListaRaza, listaMascota[i].idRaza);
+            indicePaisI = buscarIndicePaisPorId(idPaisI, listaPaises, tamanioListaPaises);
+            idPaisJ = buscarIdPaisOrigenPorIdRaza(listaRazas, tamanioListaRaza, listaMascota[j].idRaza);
+            indicePaisJ = buscarIndicePaisPorId(idPaisJ, listaPaises, tamanioListaPaises);
+
+            if(listaPaises[indicePaisI].codigoArea < listaPaises[indicePaisJ].codigoArea)
+            {
+                aux = listaMascota[i];
+                listaMascota[i] = listaMascota[j];
+                listaMascota[j] = aux;
+
+            }
         }
     }
-
-idPais = buscarIdPaisOrigenPorIdRaza(listaMascota[i].idRaza);
-        indicePais = buscarIndicePaisPorId(idPais, listaPaises, tamanioListaPaises);
-        if(i == 0 || listaPaises[indicePais].codigoArea)
-        {
-
-        }
-buscarIdPaisOrigenPorIdRaza();
-
-
-
-}*/
+    mostrarListaMascota(listaMascota, tamanioListaMascota, listaRazas, tamanioListaRaza, listaPaises, tamanioListaPaises);
+}
 
 /*
 * Carga una mascota en el listado de mascotas.
