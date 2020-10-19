@@ -113,8 +113,6 @@ void menu(void)
             printf("\nEl pais con mayor cantidad de mascotas registradas es:");
             mostrarPaisConMayorCantidadMascotas(listaPaises, TAM_LISTA_PAISES);
             printf("\nordenarPaisPorCodigoArea\n");
-            ordenarPaisPorCodigoArea(listaPaises, TAM_LISTA_PAISES);
-            mostrarListaPaises(listaPaises, TAM_LISTA_PAISES);
             break;
         case 12: // SUMA TOTAL DE PESOS POR TIPO PASAR TODO ESTO A UNA FUNCION
             mostrarSumaPesosCantidadYPromedioPorTipo(listaMascota, TAM_LISTA_MASCOTA);
