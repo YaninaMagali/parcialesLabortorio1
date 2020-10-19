@@ -120,23 +120,7 @@ int buscarIndiceMascotaPorId(eMascota listaMascota[], int tamanioLista, int idSo
     }
     return indice;
 }
-// El prob es uque itera en el for sin punto de corte. PERO si le pongo un BREAK cuando vuelva a iterar va a mostrar el indice 0.
-// se ve cuando tengo mas de una mascota con el mismo IDRaza
-int buscarIdMascotaPorIdRaza(eMascota listaMascota[], int tamanioListaMascota, int idRazaRecibido)
-{
-    int i;
-    int idMascota;
 
-    for(i=0 ; i < tamanioListaMascota; i++)
-    {
-        if(idRazaRecibido == listaMascota[i].idRaza && listaMascota[i].estaVacio == 0)
-        {
-            idMascota = listaMascota[i].idMascota;
-        }
-    }
-
-    return idMascota;
-}
 
 float sumarPesoTotalPorTipo(eMascota listaMascota[], int tamanioListaMascota, char tipo[])
 {

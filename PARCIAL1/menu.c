@@ -22,14 +22,6 @@ void menu(void)
     int idRaza;
     int idRazaSolicitada;
     int idMascotaSolicitado;
-    /*
-    float sumaPesosPerros;
-    float sumaPesosGatos;
-    float cantidadTotalPerros;
-    float cantidadTotalGatos;
-    float promedioPesoPerros;
-    float promedioPesoGatos;
-    */
     char tamanioRaza[TAMANIO_TAMANIO_RAZA];
     float sumaPesosPorTamanio;
 
@@ -112,7 +104,6 @@ void menu(void)
             mostrarListaPaises(listaPaises, TAM_LISTA_PAISES);
             printf("\nEl pais con mayor cantidad de mascotas registradas es:");
             mostrarPaisConMayorCantidadMascotas(listaPaises, TAM_LISTA_PAISES);
-            printf("\nordenarPaisPorCodigoArea\n");
             break;
         case 12: // SUMA TOTAL DE PESOS POR TIPO PASAR TODO ESTO A UNA FUNCION
             mostrarSumaPesosCantidadYPromedioPorTipo(listaMascota, TAM_LISTA_MASCOTA);

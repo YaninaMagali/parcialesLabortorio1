@@ -122,20 +122,7 @@ void mostrarMascotaOrdenadaPorPeso(eMascota listaMascota[], int tamanioLista, eR
     }
     mostrarListaMascota(listaMascota, tamanioLista, listaRazas, tamanioListaRaza, listaPaises, tamanioListaPaises);
 }
-/*
-void mostrarMascotaPorIdRaza(int idRazaRecibido, eRaza listaRazas[], int tamanioListaRaza, eMascota listaMascota[], int tamanioListaMascota, ePais listaPaises[], int tamanioListaPaises)
-{
-    int i;
 
-    for(i=0 ; i < tamanioListaMascota; i++)
-    {
-        if(idRazaRecibido == listaMascota[i].idRaza && listaMascota[i].estaVacio == 0)
-        {
-            mostrarMascota(listaMascota[i], listaRazas, tamanioListaRaza, listaPaises, tamanioListaPaises);
-        }
-    }
-}
-*/
 void mostrarMascotaPorTamanio(char tamanio[],eMascota listaMascota[], int tamanioListaMascota, eRaza listaRazas[],int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises)
 {
     int i;
@@ -219,9 +206,6 @@ eMascota cargarMascota(eMascota mascotaData, int idMascota, eRaza listaRazas[], 
 
         IncrementarCantidadMascotaPorPais(listaPaises, tamanioListaPais, idPais);
     }
-
-
-
     return mascotaData;
 }
 
@@ -233,7 +217,6 @@ int borrarMascota(int IdMascota, eMascota listaMascota[], int tamanioLista, eRaz
     int resultado;
 
     resultado = -1;
-
 
     indiceABorrar = buscarIndiceMascotaPorId(listaMascota, tamanioLista, IdMascota);
 

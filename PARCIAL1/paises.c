@@ -128,7 +128,6 @@ void mostrarPaisConMayorCantidadMascotas(ePais listaPaises[], int tamanioListaPa
 
 int IncrementarCantidadMascotaPorPais(ePais listaPais[], int tamanioListaPais, int idPais)
 {
-    //int idPais;
     int i;
 
     for(i = 0; i < tamanioListaPais; i++)

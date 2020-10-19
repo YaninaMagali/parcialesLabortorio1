@@ -5,13 +5,13 @@
 
 1602679789 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.h
 
-1602970772 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.c
+1603117529 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.c
 	<string.h>
 	<stdio.h>
 	"mascotas.h"
 	"pedirDatos.h"
 
-1603117263 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.h
+1603117564 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.h
 
 1602796107 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\pedirdatos.h
 
@@ -21,7 +21,7 @@
 	"MascotasRazasPaises.h"
 	"pedirDatos.h"
 
-1602977111 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.h
+1603117529 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.h
 	"mascotas.h"
 	"razas.h"
 	"paises.h"
@@ -30,7 +30,7 @@
 
 1602795028 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\paises.h
 
-1603111493 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.c
+1603117529 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

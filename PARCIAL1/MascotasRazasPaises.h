@@ -26,9 +26,6 @@ void mostrarMascotaOrdenadaPorPeso(eMascota listaMascota[], int tamanioLista, eR
 void mostrarMascotaOrdenadaPorCodigoArea(eMascota listaMascota[], int tamanioListaMascota, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 void mostrarMascotaPorTamanio(char tamanio[],eMascota listaMascota[], int tamanioListaMascota, eRaza listaRazas[],int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 
-
-//int buscarIdMascotaPorIdRaza(eMascota listaMascota[], int tamanioListaMascota, int idRazaRecibido);
-
 float sumarPesoTotalPorTamanio(char tamanioMascota[], eMascota listaMascota[], int tamanioListaMascota,  eRaza listaRazas[],  int tamanioListaRaza);
 
 
