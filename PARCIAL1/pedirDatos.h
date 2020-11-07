@@ -7,7 +7,7 @@ char obtenerUnCaracter(char mensaje[]);
 char remmplazarSaltoPorEspacio(char string[]);
 int confirmarAccionUsuario(void);
 float pedirNumeroFlotante(char mensaje[]);
-int generarId(int ultimoId);
+int generarId(int* ultimoId);
 void formatearNombrePropio(char cadena[]);
 float calcularPromedio(float valorUno, float ValorDos);
 

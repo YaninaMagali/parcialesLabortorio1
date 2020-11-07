@@ -14,7 +14,7 @@ int buscarIndicePorIdRaza(eRaza listaRazas[], int tamanioListaRaza, int idRaza);
 //MASCOTAS
 int pedirIdMascota(eMascota listaMascota[], int tamanioLista, eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 
-eMascota cargarMascota(eMascota mascotaData, int idMascota, eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais);
+eMascota cargarMascota(eMascota mascotaData, int* idMascota, eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais);
 int borrarMascota(int idMascota, eMascota listaMascota[], int tamanioLista, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais);
 int editarMascota(eMascota listaMascota[], int tamanioLista, eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais);
 

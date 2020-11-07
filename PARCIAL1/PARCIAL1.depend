@@ -13,15 +13,15 @@
 
 1603117564 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotas.h
 
-1602796107 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\pedirdatos.h
+1604762012 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\pedirdatos.h
 
-1603117003 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.c
+1604761991 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.c
 	<string.h>
 	<stdio.h>
 	"MascotasRazasPaises.h"
 	"pedirDatos.h"
 
-1603117529 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.h
+1604761768 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.h
 	"mascotas.h"
 	"razas.h"
 	"paises.h"
@@ -30,7 +30,7 @@
 
 1602795028 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\paises.h
 
-1603117529 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.c
+1604761843 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -38,7 +38,7 @@
 	"menu.h"
 	"MascotasRazasPaises.h"
 
-1602795029 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\paises.c
+1603117611 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\paises.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

@@ -173,7 +173,7 @@ void mostrarMascotaOrdenadaPorCodigoArea(eMascota listaMascota[], int tamanioLis
 * Recibe el id de la raza, el id de la mascota y el lugar donde se va a guardar la mascota
 * Devuelve la mascota cargada
 */
-eMascota cargarMascota(eMascota mascotaData, int idMascota, eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais)
+eMascota cargarMascota(eMascota mascotaData, int* idMascota, eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais)
 {
     int idRaza;
     int idPais;
@@ -202,6 +202,7 @@ eMascota cargarMascota(eMascota mascotaData, int idMascota, eRaza listaRazas[], 
         obtenerCadena("Tipo > Perro, Gato, etc: ", "Error! Solo se pueden ingresar letras ", mascotaData.tipoMascota, TAMANIO_TIPO);
         mascotaData.estaVacio = cambiarEstadoEstaVacio(mascotaData);
         mascotaData.idMascota = generarId(idMascota);
+        *idMascota = generarId(idMascota);
         mascotaData.idRaza = idRaza;//ElegirRazaAAsignar(listaRazas, tamanioListaRazas);
 
         IncrementarCantidadMascotaPorPais(listaPaises, tamanioListaPais, idPais);

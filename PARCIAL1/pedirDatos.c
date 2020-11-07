@@ -113,11 +113,11 @@ int confirmarAccionUsuario(void)
     return continuar;
 }
 
-int generarId(int ultimoId)
+int generarId(int* ultimoId)
 {
     int idActual;
 
-    idActual = ultimoId + 1;
+    idActual = *ultimoId + 1;
 
     return idActual;
 }
