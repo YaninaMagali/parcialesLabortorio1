@@ -21,7 +21,7 @@
 	"MascotasRazasPaises.h"
 	"pedirDatos.h"
 
-1604761768 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.h
+1604762266 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\mascotasrazaspaises.h
 	"mascotas.h"
 	"razas.h"
 	"paises.h"
@@ -30,7 +30,7 @@
 
 1602795028 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\paises.h
 
-1604761843 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.c
+1604762241 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -52,7 +52,7 @@
 	"razas.h"
 	"pedirDatos.h"
 
-1602809547 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\pedirdatos.c
+1604762022 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial1\pedirdatos.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

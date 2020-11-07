@@ -4,7 +4,7 @@
 #include "razas.h"
 #include "paises.h"
 //RAZAS
-eRaza cargarRaza(eRaza razaData, int ultimoIdRaza, ePais listaPaises[], int tamanioListaPaises);
+eRaza cargarRaza(eRaza razaData, int* ultimoIdRaza, ePais listaPaises[], int tamanioListaPaises);
 int borrarRaza(eMascota listaMascota[], int tamanioListaMascota, int idRazaSolicitada, eRaza listaRazas[],  int tamanioListaRaza, ePais listaPaises[], int tamanioListaPais);
 int pedirRaza(eRaza listaRazas[], int tamanioListaRaza, ePais listaPaises[], int tamanioListaPaises);
 void mostrarRazas(eRaza razaData, ePais listaPaises[], int tamanioListaPaises);

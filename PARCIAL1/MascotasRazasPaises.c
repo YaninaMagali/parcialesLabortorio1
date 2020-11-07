@@ -353,12 +353,13 @@ int editarMascota(eMascota listaMascota[], int tamanioLista, eRaza listaRazas[],
     return resultado;
 }
 
-eRaza cargarRaza(eRaza razaData, int ultimoIdRaza, ePais listaPaises[], int tamanioListaPaises)
+eRaza cargarRaza(eRaza razaData, int* ultimoIdRaza, ePais listaPaises[], int tamanioListaPaises)
 {
     int idRaza;
     int idPaisOrigen;
 
     idRaza = generarId(ultimoIdRaza);
+    *ultimoIdRaza = idRaza;
     idPaisOrigen = elegirPaisOrigenRaza(listaPaises, tamanioListaPaises);
     if(idPaisOrigen != -1)
     {

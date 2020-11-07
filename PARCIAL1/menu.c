@@ -21,6 +21,7 @@ void menu(void)
     int ultimoIdMascota;
     int* pUltimoIdMascota;
     int idRaza;
+    int* pUltimoIdRaza;
     int idRazaSolicitada;
     int idMascotaSolicitado;
     char tamanioRaza[TAMANIO_TAMANIO_RAZA];
@@ -30,6 +31,7 @@ void menu(void)
     idRaza = 6;
     sumaPesosPorTamanio=0;
     pUltimoIdMascota = &ultimoIdMascota;
+    pUltimoIdRaza = &idRaza;
 
     inicializarArrayComoVacio(listaMascota, TAM_LISTA_MASCOTA);
     inicializarArrayRazaComoVacio(listaRazas, TAM_LISTA_RAZA);
@@ -88,7 +90,7 @@ void menu(void)
             }
             else
             {
-                listaRazas[filaRaza] = cargarRaza(listaRazas[filaRaza], idRaza, listaPaises, TAM_LISTA_PAISES);
+                listaRazas[filaRaza] = cargarRaza(listaRazas[filaRaza], pUltimoIdRaza, listaPaises, TAM_LISTA_PAISES);
             }
             break;
         case 9: // BORRAR RAZAS
