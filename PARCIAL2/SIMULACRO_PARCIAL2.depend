@@ -1,0 +1,119 @@
+# depslib dependency file v1.0
+1605703101 source:c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1605660290 c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\linkedlist.h
+
+1605661884 source:c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1605888915 source:c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\participantes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"participantes.h"
+	"parser.h"
+
+1605703544 c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\participantes.h
+
+1605703567 source:c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"menu.h"
+	"participantes.h"
+	"getDataBase.h"
+
+1605659850 c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\menu.h
+
+1605650544 source:c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\getdatabase.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"getDataBase.h"
+	"validateDataBase.h"
+
+1605650572 c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\getdatabase.h
+
+1605650618 c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\validatedatabase.h
+
+1605650595 source:c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\validatedatabase.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1605889098 source:c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"participantes.h"
+
+1605658911 c:\users\yanina diaz\documents\utn\programacion 1\simulacro parcial 2\simulacro_parcial2\parser.h
+
+1605650544 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\getdatabase.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"getDataBase.h"
+	"validateDataBase.h"
+
+1605650572 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\getdatabase.h
+
+1605650618 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\validatedatabase.h
+
+1605703101 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1605660290 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\linkedlist.h
+
+1605661884 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1605659850 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\menu.h
+
+1605964352 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"menu.h"
+	"participantes.h"
+	"getDataBase.h"
+
+1605703544 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\participantes.h
+
+1605889098 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"participantes.h"
+
+1605889271 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\participantes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"participantes.h"
+	"parser.h"
+
+1605658911 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\parser.h
+
+1605650595 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\validatedatabase.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
