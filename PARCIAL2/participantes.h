@@ -10,7 +10,7 @@ char fechaPresentacion[15];
 char temaPresentacion [30];
 int puntajePrimeraRonda;
 int puntajeSegundaRonda;
-//int promedio;
+float promedio;
 }eParticipante;
 
 eParticipante* new();
@@ -28,6 +28,7 @@ int getnumeroConcursante(eParticipante* this,int* numero);
 int getAnioNacimiento(eParticipante* this,int* anio);
 int getPuntajeUno(eParticipante* this,int* puntos);
 int getPuntajeDos(eParticipante* this,int* puntos);
+int getPromedio(eParticipante* this,float* promedio);
 
 int setNumeroConcursante(eParticipante* this, char* numero);
 int setAnioNacimiento(eParticipante* this, char* anio);
@@ -37,9 +38,11 @@ int setFechaPresentacion(eParticipante* this, char* fecha);
 int setTemaPresentacion(eParticipante* this, char* tema);
 int setPuntajePrimeraRonda(eParticipante* this, char* puntos);
 int setPuntajeSegundaRonda(eParticipante* this, int puntos);
+int setPromedio(eParticipante* this, float promedio);
 
 int asignarSegundoPuntajeRandom(void* pParticipante);
 int generarNumeroRandom();
+int calcularPromedio(void* pParticipante);
 
 
 #endif // PARTICIPANTES_H_INCLUDED

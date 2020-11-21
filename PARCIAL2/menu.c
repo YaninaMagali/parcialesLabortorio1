@@ -14,11 +14,10 @@ void menu(void)
     int menuOption;
 
     lista = ll_newLinkedList();
-    int num;
 
     do
     {
-        if(getInt(&menuOption, "\nSelecciona una opcion\n 1. Cargar los datos de los empleados desde el archivo data.csv (modo texto) \n 2.Mostrar\n 10. Salir\n" ,"Opcion invalida\n", 1, 10, 20) == 1)
+        if(getInt(&menuOption, "\nSelecciona una opcion\n 1. Cargar los datos de los empleados desde el archivo data.csv (modo texto) \n 2.Mostrar\n 3.Asignar puntaje ronda 2\n 4.Calcular promedio\n 10. Salir\n" ,"Opcion invalida\n", 1, 10, 20) == 1)
         {
             switch(menuOption)
             {
@@ -39,8 +38,7 @@ void menu(void)
                     }
                     break;
                 case 3:
-                    //num = generarNumeroRandom();
-                    if(ll_map(lista, asignarSegundoPuntajeRandom) == 1)
+                    if(ll_map(lista, asignarSegundoPuntajeRandom) == 0)
                     {
                         printf("Puntaje asignado\n");
                     }
@@ -48,7 +46,16 @@ void menu(void)
                     {
                         printf("No se pudo asignar puntaje\n");
                     }
-                    //printf("generarNumeroRandom %d", num);
+                    break;
+                case 4:
+                    if(ll_map(lista, calcularPromedio) == 0)
+                    {
+                        printf("Promedio calculado\n");
+                    }
+                    else
+                    {
+                        printf("No se pudo calcular el promedio\n");
+                    }
                     break;
             }
         }

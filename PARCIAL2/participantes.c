@@ -63,8 +63,7 @@ int loadFromText(char* path, LinkedList* pArrayList)
     result = 0;
     pFile = fopen(path,"r");
 
-    if(//fileLoaded == 0 &&
-       path != NULL
+    if(path != NULL
        && pArrayList != NULL
        && parser_FromText(pFile, pArrayList) == 1)
        {
@@ -85,6 +84,7 @@ int ListarParticipantes(LinkedList* pArrayList)
     char temaPresentacion [30];
     int puntajePrimeraRonda;
     int puntajeSegundaRonda;
+    float promedio;
     eParticipante* pParticipante = NULL;
     int result;
     int len;
@@ -109,8 +109,9 @@ int ListarParticipantes(LinkedList* pArrayList)
                 getTemaPresentacion(pParticipante, temaPresentacion);
                 getPuntajeUno(pParticipante, &puntajePrimeraRonda);
                 getPuntajeDos(pParticipante, &puntajeSegundaRonda);
+                getPromedio(pParticipante, &promedio);
 
-                printf("%2d, %5d, %11s, %12s, %13s, %22s, %20d, %20d \n",numeroConcursante, anioNacimiento, nombre, dni, fechaPresentacion, temaPresentacion, puntajePrimeraRonda, puntajeSegundaRonda);
+                printf("%2d, %5d, %11s, %12s, %13s, %22s, %20d, %20d %21.2f\n",numeroConcursante, anioNacimiento, nombre, dni, fechaPresentacion, temaPresentacion, puntajePrimeraRonda, puntajeSegundaRonda, promedio);
                 result = 1;
             }
         }
@@ -234,6 +235,20 @@ int getPuntajeDos(eParticipante* this,int* puntos)
     return resultado;
 }
 
+int getPromedio(eParticipante* this,float* promedio)
+{
+    int resultado;
+    resultado = 0;
+
+    if(this!= NULL && promedio != NULL)
+    {
+        *promedio = this->promedio;
+        resultado = 1;
+    }
+
+    return resultado;
+}
+
 int setNumeroConcursante(eParticipante* this, char* numero)
 {
     int resultado;
@@ -336,13 +351,16 @@ int setPuntajeSegundaRonda(eParticipante* this, int puntos)
     return resultado;
 }
 
-
-int calcularPromedio(float valorUno, float valorDos)
+int setPromedio(eParticipante* this, float promedio)
 {
-    float resultado;
+    int resultado;
+    resultado = 0;
 
-    resultado = (valorUno + valorDos) / 2;
-
+    if(this!= NULL && promedio >= 0)
+    {
+        this->promedio = promedio;
+        resultado = 1;
+    }
     return resultado;
 }
 
@@ -359,7 +377,7 @@ int asignarSegundoPuntajeRandom(void* pParticipante)
 {
     int puntos;
     int result;
-    result = -1;
+    result = 0;
 
     pParticipante = (eParticipante*)pParticipante;
 
@@ -368,7 +386,41 @@ int asignarSegundoPuntajeRandom(void* pParticipante)
         puntos = generarNumeroRandom();
         //printf("generarNumeroRandom %d", puntos);
         setPuntajeSegundaRonda(pParticipante, puntos);
-        result = 0;
+        result = 1;
+    }
+    return result;
+}
+
+
+int calcularPromedio(void* pParticipante)
+{
+    int result;
+    int puntaje1;
+    int* pPuntaje1;
+    pPuntaje1 = &puntaje1;
+    int puntaje2;
+    int* pPuntaje2;
+    pPuntaje2 = &puntaje2;
+
+    float promedio;
+    result = 0;
+
+    if(pParticipante != NULL)
+    {
+        pParticipante = (eParticipante*)pParticipante;
+
+        if(getPuntajeUno(pParticipante, pPuntaje1) == 1)
+        {
+            if(getPuntajeDos(pParticipante, pPuntaje2) == 1)
+            {
+                promedio = (*pPuntaje1 + *pPuntaje2) / 2;
+
+                if(setPromedio(pParticipante, promedio) == 1)
+                {
+                    result = 1;
+                }
+            }
+        }
     }
     return result;
 }
