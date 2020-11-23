@@ -47,3 +47,55 @@ int parser_FromText(FILE* pFile, LinkedList* pArrayList)
     return result;
 
 }
+
+
+/** \brief Guarda los empleados en un archivo de texto
+ *
+ * \param pArrayListEmployee LinkedList* Recibe listado que va a guardar
+ * \param pFile FILE* Recibe el archivo ya abierto, donde lo va a guardar
+ * \return int Devuelve un int que indica el resutado de la operacion: 1 exitosa, 0 no realizada.
+ *
+ */
+int agregarParticipanteAFile(LinkedList* pArrayList, FILE* pFile)
+{
+    eParticipante* pParticipante = NULL;
+    int len;
+    int i;
+    int result;
+    int numeroConcursante;
+    int anioNacimiento;
+    char nombre[50];
+    char dni[13];
+    char fechaPresentacion[15];
+    char temaPresentacion [30];
+    int puntajePrimeraRonda;
+    int puntajeSegundaRonda;
+    float promedio;
+
+    result = 0;
+
+    len = ll_len(pArrayList);
+    if(!feof(pFile) && pArrayList != NULL && pFile != NULL)
+    {
+        for(i = 0; i < len; i++)
+        {
+            pParticipante = (eParticipante*)ll_get(pArrayList, i);
+
+            getnumeroConcursante(pParticipante, &numeroConcursante);
+            getAnioNacimiento(pParticipante, &anioNacimiento);
+            getNombre(pParticipante, nombre);
+            getDNI(pParticipante, dni);
+            getFechaPresentacion(pParticipante, fechaPresentacion);
+            getTemaPresentacion(pParticipante, temaPresentacion);
+            getPuntajeUno(pParticipante, &puntajePrimeraRonda);
+            getPuntajeDos(pParticipante, &puntajeSegundaRonda);
+            getPromedio(pParticipante, &promedio);
+
+            fprintf(pFile, "%d, %d, %s, %s, %s,%s, %d, %d, %.2f \n",
+                    numeroConcursante, anioNacimiento, nombre, dni, fechaPresentacion, temaPresentacion, puntajePrimeraRonda, puntajeSegundaRonda, promedio);
+            result = 1;
+        }
+    }
+
+    return result;
+}

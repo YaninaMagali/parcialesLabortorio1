@@ -424,3 +424,62 @@ int calcularPromedio(void* pParticipante)
     }
     return result;
 }
+
+
+/** \brief Abre un archivo de texto, guarda el listado y lo cierra
+ *
+ * \param path char* Recibe el path del archivo
+ * \param pArrayListEmployee LinkedList* Recibe el listado a guardar
+ * \return int Devuelve un int que indica el resutado de la operacion: 1 exitosa, 0 no realizada.
+ *
+ */
+int guardarComoTexto(char* path, LinkedList* pArrayList)
+{
+    int result;
+    result = 0;
+    FILE* pFile = NULL;
+
+    if(path != NULL
+       && pArrayList != NULL)
+    {
+        if(ll_isEmpty(pArrayList) == 0)
+        {
+            if(getUserAgreement("Para guardar ingresar S, sino cualquier tecla\n") == 1)
+            {
+                pFile = fopen(path,"w");
+                if(agregarParticipanteAFile(pArrayList, pFile)==1)
+                {
+                    result = 1;
+                }
+            }
+        }
+    }
+    fclose(pFile);
+    return result;
+}
+
+
+/** \brief - Pide al usuario confirmacion para ejecutar una accion
+ *
+ * \param void - Recibe un puntero a char para cargar el mensaje que se le quiere mostrar al usuario
+ * \return int - Si el usuario confirma, devuelve 1, sino un 0
+ *
+ */
+int getUserAgreement(char* message)
+{
+    int result;
+    char userAnswer;
+
+    result = 0;
+
+    printf(message);
+    fflush(stdin);
+    scanf("%c", &userAnswer);
+
+    if(userAnswer == 's' || userAnswer == 'S')
+    {
+        result = 1;
+    }
+
+    return result;
+}

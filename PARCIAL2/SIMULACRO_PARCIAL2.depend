@@ -70,7 +70,7 @@
 
 1605650618 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\validatedatabase.h
 
-1605703101 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\linkedlist.c
+1606143241 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\linkedlist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -85,7 +85,7 @@
 
 1605659850 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\menu.h
 
-1605966549 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\menu.c
+1606144444 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -93,15 +93,15 @@
 	"participantes.h"
 	"getDataBase.h"
 
-1605966293 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\participantes.h
+1606144733 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\participantes.h
 
-1605889098 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\parser.c
+1606144074 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"participantes.h"
 
-1605966934 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\participantes.c
+1606144733 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\participantes.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -109,7 +109,7 @@
 	"participantes.h"
 	"parser.h"
 
-1605658911 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\parser.h
+1606143354 c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\parser.h
 
 1605650595 source:c:\users\yanina diaz\documents\utn\labo1\parcialeslabortorio1\parcial2\validatedatabase.c
 	<stdio.h>

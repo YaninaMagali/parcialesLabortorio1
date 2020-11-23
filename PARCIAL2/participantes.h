@@ -16,9 +16,11 @@ float promedio;
 eParticipante* new();
 eParticipante* newParameters(char* AuxnumeroConcursante, char* AuxanioNacimiento, char* Auxnombre, char* Auxdni, char*  AuxfechaPresentacion, char*  AuxtemaPresentacion,char* AuxpuntajePrimeraRonda);
 int generarNumeroRandom();
+int getUserAgreement(char* message);
 
 int loadFromText(char* path, LinkedList* pArrayList);
 int ListarParticipantes(LinkedList* pArrayList);
+int guardarComoTexto(char* path, LinkedList* pArrayList);
 
 int getNombre(eParticipante* this, char* nombre);
 int getDNI(eParticipante* this, char* dni);
