@@ -6,10 +6,13 @@
 #include "participantes.h"
 #include "getDataBase.h"
 #define ARCHIVO "misiones.csv"
+#define EXTENSION ".csv"
 
 void menu(void)
 {
-    printf("SIMULACRO PARCIAL\n");
+
+    LinkedList* subLista = NULL;
+    printf("PARCIAL\n");
 
     LinkedList* lista = NULL;
 
@@ -20,12 +23,22 @@ void menu(void)
 
     do
     {
-        if(getInt(&menuOption, "\nSelecciona una opcion\n 1. Cargar los datos de los empleados desde el archivo data.csv (modo texto) \n 2.Mostrar\n 3.Asignar puntaje ronda 2\n 4.Calcular promedio\n 4.Guardar CSV\n 10. Salir\n" ,"Opcion invalida\n", 1, 10, 20) == 1)
+        if(getInt(&menuOption, "\nSelecciona una opcion\n 1. Cargar los datos del archivo data.csv (modo texto) \n 2.Mostrar\n 3.Asignar puntaje ronda 2\n 4.Calcular promedio\n 5.Guardar CSV\n 6.Fltrar por mayor promedio\n 10. Salir\n" ,"Opcion invalida\n", 1, 10, 20) == 1)
         {
             switch(menuOption)
             {
                 case 1:
+                    /*
                     if(loadFromText(ARCHIVO, lista) == 1)
+                    {
+                        printf("Carga exoitosa\n");
+                    }
+                    else
+                    {
+                        printf("No se pudo cargar el archivo\n");
+                    }
+                    */
+                    if(pedirArchivoACargar(lista) == 1)
                     {
                         printf("Carga exoitosa\n");
                     }
@@ -65,6 +78,28 @@ void menu(void)
                     if(guardarComoTexto(pathResultado, lista) == 1)
                     {
                         printf("Guardado OK\n");
+                    }
+                    else
+                    {
+                        printf("No se pudo guardar\n");
+                    }
+                    break;
+                case 6:
+                    subLista = ll_filter(lista, filtrarPorPromedioMayor);
+                    if(subLista!= NULL)
+                    {
+                        printf("Sublista OK\n");
+                    }
+                    else
+                    {
+                        printf("No se pudo crear sublista\n");
+                    }
+                    break;
+                case 7:
+                    ListarParticipantes(subLista);
+                    if(guardarUnParticipantePorArchivo(subLista, EXTENSION) == 1)
+                    {
+                        printf("Guardar OK\n");
                     }
                     else
                     {

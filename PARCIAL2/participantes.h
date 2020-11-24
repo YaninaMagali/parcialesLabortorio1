@@ -13,6 +13,12 @@ int puntajeSegundaRonda;
 float promedio;
 }eParticipante;
 
+int filtrarPorPromedioMayor(void* pParticipante);
+float buscarMaximo(LinkedList* this);
+int guardarUnParticipantePorArchivo(LinkedList* this, char* ext);
+
+
+
 eParticipante* new();
 eParticipante* newParameters(char* AuxnumeroConcursante, char* AuxanioNacimiento, char* Auxnombre, char* Auxdni, char*  AuxfechaPresentacion, char*  AuxtemaPresentacion,char* AuxpuntajePrimeraRonda);
 int generarNumeroRandom();

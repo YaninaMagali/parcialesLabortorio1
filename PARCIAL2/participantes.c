@@ -4,6 +4,9 @@
 #include "LinkedList.h"
 #include "participantes.h"
 #include "parser.h"
+#define FILE_SIZE 30
+#include "getDataBase.h"
+
 
 eParticipante* new()
 {
@@ -481,5 +484,107 @@ int getUserAgreement(char* message)
         result = 1;
     }
 
+    return result;
+}
+
+float buscarMaximo(LinkedList* this)
+{
+    int i;
+    int len;
+    float max;
+    float PromedioAux;
+    float* pPromedioAux;
+    pPromedioAux = &PromedioAux;
+    eParticipante* pParticipante = NULL;
+
+    len = ll_len(this);
+
+    for(i = 0; i<len; i++)
+    {
+        pParticipante = (eParticipante*)ll_get(this, i);
+        getPromedio(pParticipante, pPromedioAux);
+        if( i == 0 || *pPromedioAux > max)
+        {
+            max = *pPromedioAux;
+        }
+    }
+
+    return max;
+}
+
+int filtrarPorPromedioMayor(void* pParticipante)
+{
+    int maxPromedio = 46;
+    float promedioAux;
+    float* pPromedioAux;
+    pPromedioAux = &promedioAux;
+    int result;
+    result = 0;
+    pParticipante = (eParticipante*)pParticipante;
+    //maxPromedio = buscarMaximo(lista);
+
+    if(pParticipante != NULL)
+    {
+        getPromedio(pParticipante, pPromedioAux);
+        if(*pPromedioAux == maxPromedio)
+        {
+            result = 1;
+        }
+    }
+    return result;
+}
+
+int guardarUnParticipantePorArchivo(LinkedList* this, char* ext)
+{
+    int result;
+    int i;
+    int len;
+    result = 0;
+    FILE* pFile = NULL;
+    eParticipante* pParticipante = NULL;
+    char dniAux[13];
+    len = ll_len(this);
+
+    if(ext != NULL
+       && this != NULL)
+    {
+        if(ll_isEmpty(this) == 0)
+        {
+            if(getUserAgreement("Para guardar ingresar S, sino cualquier tecla\n") == 1)
+            {
+                for(i = 0; i<len; i++)
+                {
+                    pParticipante = ll_get(this, i);
+                    getDNI(pParticipante, dniAux);
+                    strcat(dniAux, ext);
+                    pFile = fopen(dniAux,"w");
+                    if(agregarParticipanteAFile(this, pFile)==1)
+                    {
+                        result = 1;
+                    }
+                }
+            }
+        }
+    }
+    fclose(pFile);
+    return result;
+}
+
+
+int pedirArchivoACargar(LinkedList* lista)
+{
+    int result;
+    char archivo[FILE_SIZE];
+
+    result = 0;
+
+    printf("Ingresa el nombre del archivo a cargar: ");
+    if(getBase(archivo, FILE_SIZE)== 0)
+    {
+        if(loadFromText(archivo, lista) == 1)
+        {
+            result = 1;
+        }
+    }
     return result;
 }

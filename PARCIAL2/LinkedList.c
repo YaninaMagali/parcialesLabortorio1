@@ -3,6 +3,42 @@
 #include <string.h>
 #include "LinkedList.h"
 
+/** \brief Ejecuta la funcion criterio recibida por parametro por cada elemento de la lista. Si dicha funcion devuelve 1, el elemento se agrega a una nueva lista
+ *
+ * \param Recibe un puntero a LinkedList, y un puntero a funcion
+ * \return LinkedList* Devuelve un puntero a nueva LinkedList si pudo agregar al menos un elemento a la nueva lista, sino NULL
+ *
+ */
+LinkedList* ll_filter(LinkedList* this, int (*pFunc) (void* element))
+{
+    int i;
+    int len;
+    void* pElement;
+    LinkedList* nuevaLista = NULL;
+
+    if(this != NULL && pFunc != NULL)
+    {
+        len = ll_len(this);
+        nuevaLista = ll_newLinkedList();
+        for(i = 0; i < len; i++)
+        {
+            pElement = ll_get(this, i);
+            if(nuevaLista != NULL && pFunc(pElement) == 1)
+            {
+                ll_add(nuevaLista, pElement);
+            }
+        }
+    }
+    return nuevaLista;
+}
+
+
+/** \brief Ejecuta la función recibida como parámetro por cada elemento de la lista, y en cada llamada le pasa dicho elemento
+ *
+ * \param  Recibe un puntero a LinkedList, y un puntero a funcion
+ * \return Devuelve 0 si pudo realizar la operacion, sino -1
+ *
+ */
 int ll_map(LinkedList* this, int (*pFunc)(void*))
 {
     int i;
@@ -533,7 +569,6 @@ LinkedList* ll_subList(LinkedList* this,int from,int to)
                 ll_add(cloneArray, pElement);
             }
         }
-
     }
     return cloneArray;
 }
